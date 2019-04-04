@@ -1,10 +1,20 @@
-<div class="alert alert-primary" role="alert">
-  A simple primary alert—check it out!
-</div>
-
 <div class="input-group mb-3">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="basic-addon1">@</span>
+        Fabric Identity Url
     </div>
-    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="text" class="form-control" placeholder="url" aria-label="url" [(ngModel)]="identityUrl"  />
+</div>
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        Fabric-Installer Secret
+    </div>
+    <input type="text" class="form-control" placeholder="secret" aria-label="secret" [(ngModel)]="fabricInstallerSecret"  />
+</div>
+<div class="panel panel-default">
+  <div class="panel-body">
+    {{installerToken}}
+  </div>
+</div>
+<div class="btn-group" role="group" aria-label="getToken">
+  <button type="button" class="btn btn-default" (click)="getToken()" >Get Token</button>
 </div>
