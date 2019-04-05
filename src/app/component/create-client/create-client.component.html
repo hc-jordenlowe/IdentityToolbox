@@ -1,3 +1,18 @@
-<p>
-  create-client works!
-</p>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+      Client
+  </div>
+  <textarea name="Text1" cols="60" rows="10" [(ngModel)]="client"></textarea>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    {{result}}
+  </div>
+</div>
+<div class="btn-group" role="group" aria-label="createClient">
+  <button type="button" class="btn btn-default" (click)="createClient()" >Create Client</button>
+</div>
+<div>
+  For more information, https://github.com/HealthCatalyst/Fabric.Identity/wiki/API-Reference-Models#fabric-identity-api-models-client
+</div>

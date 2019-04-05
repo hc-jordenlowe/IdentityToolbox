@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { IdentityApiService } from './component/services/identity-api.service';
 import { GetClientsComponent } from './component/get-clients/get-clients.component';
+import { ResetClientComponent } from './component/reset-client/reset-client.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { GetClientsComponent } from './component/get-clients/get-clients.compone
     GetInstallerAccessTokenComponent,
     CreateClientComponent,
     GetClientsComponent,
+    ResetClientComponent,
 
   ],
   imports: [

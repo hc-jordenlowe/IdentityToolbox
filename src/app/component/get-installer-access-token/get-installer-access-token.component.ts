@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter  } from '@angular/core';
 import { IdentityApiService } from '../../component/services/identity-api.service';
 
 @Component({
@@ -12,9 +12,11 @@ export class GetInstallerAccessTokenComponent implements OnInit {
   fabricInstallerName='Fabric-Installer'
   fabricInstallerSecret=''
 
+  @Output() messageEvent = new EventEmitter<Object>();
+
   constructor(
-    private identityService: IdentityApiService) { 
-    
+    private identityService: IdentityApiService) {
+
   }
 
   ngOnInit() {
@@ -25,6 +27,8 @@ export class GetInstallerAccessTokenComponent implements OnInit {
       this.identityService.getToken(this.identityUrl, this.fabricInstallerName, this.fabricInstallerSecret)
         .subscribe(response => {
           this.installerToken = response["access_token"]
+          let message = { "url":this.identityUrl, "token":this.installerToken }
+          this.messageEvent.emit(message)
         }, error => {
           this.installerToken = `error: ${JSON.stringify(error)}`
         })

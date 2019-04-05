@@ -1,13 +1,16 @@
 <div class="container-fluid">
   <mat-tab-group>
     <mat-tab label="Get Access Token">
-        <app-get-installer-access-token></app-get-installer-access-token>
+        <app-get-installer-access-token (messageEvent)="receivedToken($event)"></app-get-installer-access-token>
     </mat-tab>
     <mat-tab label="Create Client">
-        <app-create-client></app-create-client>
+        <app-create-client [secret]="secret" [identityUrl]="identityUrl"></app-create-client>
     </mat-tab>
     <mat-tab label="Get Client">
-        <app-get-clients></app-get-clients>
+        <app-get-clients [secret]="secret" [identityUrl]="identityUrl"></app-get-clients>
+    </mat-tab>
+    <mat-tab label="Reset Client Password">
+        <app-reset-client [secret]="secret" [identityUrl]="identityUrl"></app-reset-client>
     </mat-tab>
   </mat-tab-group>
 </div>
