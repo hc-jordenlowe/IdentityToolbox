@@ -6,9 +6,15 @@
 </div>
 <div class="input-group mb-3">
     <div class="input-group-prepend">
-        Fabric-Installer Secret
+        Client Id
     </div>
-    <input type="text" class="form-control" placeholder="secret" aria-label="secret" [(ngModel)]="fabricInstallerSecret"  />
+    <input type="text" class="form-control" placeholder="name" aria-label="name" [(ngModel)]="clientName"  />
+</div>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+      Client Secret
+  </div>
+  <input type="text" class="form-control" placeholder="secret" aria-label="secret" [(ngModel)]="clientSecret"  />
 </div>
 <div class="panel panel-default">
   <div class="panel-body">

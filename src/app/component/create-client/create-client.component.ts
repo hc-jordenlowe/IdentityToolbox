@@ -19,7 +19,7 @@ export class CreateClientComponent implements OnInit {
       "allowedScopes":[""],
       "clientId":"",
       "clientName":""
-    }`
+}`
   }
 
   ngOnInit() {

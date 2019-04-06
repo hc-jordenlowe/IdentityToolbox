@@ -9,8 +9,8 @@ import { IdentityApiService } from '../../component/services/identity-api.servic
 export class GetInstallerAccessTokenComponent implements OnInit {
   installerToken = ''
   identityUrl=''
-  fabricInstallerName='Fabric-Installer'
-  fabricInstallerSecret=''
+  clientName='Fabric-Installer'
+  clientSecret=''
 
   @Output() messageEvent = new EventEmitter<Object>();
 
@@ -23,8 +23,8 @@ export class GetInstallerAccessTokenComponent implements OnInit {
   }
 
   public getToken() {
-    if( this.identityUrl && this.fabricInstallerSecret) {
-      this.identityService.getToken(this.identityUrl, this.fabricInstallerName, this.fabricInstallerSecret)
+    if( this.identityUrl && this.clientSecret && this.clientName) {
+      this.identityService.getToken(this.identityUrl, this.clientName, this.clientSecret)
         .subscribe(response => {
           this.installerToken = response["access_token"]
           let message = { "url":this.identityUrl, "token":this.installerToken }
