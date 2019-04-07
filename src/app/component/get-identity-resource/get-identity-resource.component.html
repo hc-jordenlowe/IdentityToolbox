@@ -1,0 +1,15 @@
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+      identityResource Id
+  </div>
+  <input type="text" class="form-control" placeholder="Identity Resource id" aria-label="identityResource id" [(ngModel)]="identityResourceId"  />
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    {{result}}
+  </div>
+</div>
+<div class="btn-group" role="group" aria-label="getidentityResource">
+  <button type="button" class="btn btn-default" (click)="getIdentityResource()" >Get identityResource</button>
+</div>

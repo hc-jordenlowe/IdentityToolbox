@@ -1,0 +1,21 @@
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+      Identity Provider
+  </div>
+  <input type="text" class="form-control" placeholder="identityProvider" aria-label="identityProvider" [(ngModel)]="identityProvider"  />
+</div>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+      Search Text
+  </div>
+  <input type="text" class="form-control" placeholder="searchText" aria-label="searchText" [(ngModel)]="searchText"  />
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    {{result}}
+  </div>
+</div>
+<div class="btn-group" role="group" aria-label="getUsers">
+  <button type="button" class="btn btn-default" (click)="getUsers()" >Get Users</button>
+</div>

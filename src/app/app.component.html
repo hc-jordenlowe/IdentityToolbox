@@ -12,5 +12,17 @@
     <mat-tab label="Reset Client Password">
         <app-reset-client [secret]="secret" [identityUrl]="identityUrl"></app-reset-client>
     </mat-tab>
+    <mat-tab label="Get Identity Providers">
+        <app-get-identity-providers [secret]="secret" [identityUrl]="identityUrl"></app-get-identity-providers>
+    </mat-tab>
+    <mat-tab label="Search Users">
+        <app-get-user-by-identity-provider [secret]="secret" [identityUrl]="identityUrl"></app-get-user-by-identity-provider>
+    </mat-tab>
+    <mat-tab label="Get API Resource">
+        <app-get-api-resource [secret]="secret" [identityUrl]="identityUrl"></app-get-api-resource>
+    </mat-tab>
+    <mat-tab label="Get Identity Resource">
+        <app-get-identity-resource [secret]="secret" [identityUrl]="identityUrl"></app-get-identity-resource>
+    </mat-tab>
   </mat-tab-group>
 </div>

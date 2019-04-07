@@ -1,0 +1,15 @@
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+      apiResource Id
+  </div>
+  <input type="text" class="form-control" placeholder="API Resource id" aria-label="apiResource id" [(ngModel)]="apiResourceId"  />
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    {{result}}
+  </div>
+</div>
+<div class="btn-group" role="group" aria-label="getapiResource">
+  <button type="button" class="btn btn-default" (click)="getApiResource()" >Get apiResource</button>
+</div>
