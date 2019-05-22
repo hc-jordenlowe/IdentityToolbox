@@ -17,6 +17,7 @@ import { GetIdentityProvidersComponent } from './component/get-identity-provider
 import { GetUserByIdentityProviderComponent } from './component/get-user-by-identity-provider/get-user-by-identity-provider.component';
 import { GetApiResourceComponent } from './component/get-api-resource/get-api-resource.component';
 import { GetIdentityResourceComponent } from './component/get-identity-resource/get-identity-resource.component';
+import { GetCustomAccessTokenComponent } from './component/get-custom-access-token/get-custom-access-token.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { GetIdentityResourceComponent } from './component/get-identity-resource/
     GetUserByIdentityProviderComponent,
     GetApiResourceComponent,
     GetIdentityResourceComponent,
+    GetCustomAccessTokenComponent,
 
   ],
   imports: [

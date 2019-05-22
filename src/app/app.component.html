@@ -3,6 +3,9 @@
     <mat-tab label="Get Access Token">
         <app-get-installer-access-token (messageEvent)="receivedToken($event)"></app-get-installer-access-token>
     </mat-tab>
+    <mat-tab label="Use Custom Token">
+        <app-get-custom-access-token (messageEvent)="receivedToken($event)"></app-get-custom-access-token>
+    </mat-tab>
     <mat-tab label="Create Client">
         <app-create-client [secret]="secret" [identityUrl]="identityUrl"></app-create-client>
     </mat-tab>

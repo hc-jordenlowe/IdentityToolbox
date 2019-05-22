@@ -1,0 +1,18 @@
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        Fabric Identity Url
+    </div>
+    <input type="text" class="form-control" placeholder="url" aria-label="url" [(ngModel)]="identityUrl"  />
+</div>
+<div class="panel panel-default">
+    <div class="input-group-prepend">
+        Token:
+    </div>
+    <input type="text" class="form-control" placeholder="token" aria-label="token" [(ngModel)]="installerToken"  />
+</div>
+<div class="panel panel-default">
+  Message: {{message}}
+</div>
+<div class="btn-group" role="group" aria-label="getToken">
+    <button type="button" class="btn btn-default" (click)="useCustomToken()">Use Custom Token</button>
+</div>
